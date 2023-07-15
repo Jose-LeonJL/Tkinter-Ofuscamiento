@@ -33,7 +33,6 @@ def configure_interfaz():
 def starts():
     configure_interfaz()
     build_frame_main()
-
     App.app.mainloop()
 
 
@@ -152,21 +151,13 @@ def build_frame_derecha_body(master):
 def build_table_frame(choice):
 
     if len(widgets) > index_tabla:
-        print(len(widgets))
-        print(widgets[index_scrolly] is None)
         widgets[index_tabla].destroy()
         widgets[index_scroll].destroy()
         widgets[index_scrolly].destroy()
-
         widgets.remove(widgets[index_scrolly])
         widgets.remove(widgets[index_scroll])
         widgets.remove(widgets[index_tabla])
 
-
-    print(len(widgets))
-
-    tree_width = widgets[index_frame_mid_derecha].winfo_width()
-    tree_height = widgets[index_frame_mid_derecha].winfo_height()
     #Obtencion de los datos de la tabla, destruccion de LABEL
     widgets[index_lbl_mid].destroy()
     datos = database.database.read_table(choice.lower())
@@ -187,7 +178,6 @@ def build_table_frame(choice):
     scrollbary.pack(side="left", fill="y")
     scrollbarx.place(x=0, y=633, width=798, height=17)
 
-    #scrollbary.place()
     tabla.pack(side="left")
     tabla.configure(xscrollcommand=scrollbarx.set)
     tabla.configure(yscrollcommand=scrollbary.set)
@@ -216,17 +206,6 @@ def build_table_frame(choice):
     tabla.update_idletasks()
     tabla.place(x=0, y=0, width=799, height=650)
 
-    #print(f"Tamañox horizon {widgets[index_frame_mid_derecha].winfo_width()}")
-    #print(f"Tamañox horizon {scrollbarx.winfo_width()}")
-    #print(f"Tamañox vertical {scrollbarx.winfo_height()}")
-    #print(f"positionx x {scrollbarx.winfo_x()}")
-    #print(f"positionx y {scrollbarx.winfo_y()}")
-    #print(f"Tamañoy horizon {scrollbary.winfo_width()}")
-    #print(f"Tamañox vertical {scrollbary.winfo_height()}")
-    #print(f"positiony x {scrollbary.winfo_x()}")
-    #print(f"positionx y {scrollbary.winfo_y()}")
-    #print()
-    #print()
 
     addwidget(tabla)
     addwidget(scrollbarx)
@@ -238,6 +217,7 @@ def exportfile():
     fecha = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     nombre_archivo = os.path.join(os.path.dirname(os.path.realpath(__file__)), f"{combobox_var.get()}-{fecha}.csv")
     datos = database.database.read_table(combobox_var.get().lower())
+    datos = ofuscamiento(combobox_var.get().lower(),datos)
     nombres_variables = []
 
     # OBTENCION DE LOS NOMBRES DE LAS COLUMNAS
@@ -249,7 +229,6 @@ def exportfile():
     for s in nombres_variables:
         header.append(s)
     datostoinsert.append(header)
-    print(1)
     print(nombres_variables)
 
     for _ in datos:
@@ -272,6 +251,39 @@ def exportfile():
 
 
     ctk = tkinter.messagebox.showinfo(title="Datos exportados", message=f"Se exporto {combobox_var.get()}")
+
+
+def ofuscamiento(table_name, datos):
+    if table_name == "usuarios":
+        count = 0
+        for dato in datos:
+            dato.usuario_id = f"{table_name}{count}"
+            dato.usuario_nombre = f"nombre{count}"
+            dato.usuario_apellido = f"apellido{count}"
+            dato.usuario_correo = f"correo{count}"
+            dato.usuario_password = f"password{count}"
+            count += 1
+    if table_name == "clientes":
+        count = 0
+        for dato in datos:
+            dato.cliente_id = f"{table_name}{count}"
+            dato.cliente_cuenta_banaria = f"cuenta_banaria{count}"
+            dato.cliente_identidad = f"identidad{count}"
+            dato.cliente_numero_tarjeta_credito = f"tarjeta{count}"
+            dato.cliente_numero_telefonico = f"telefono{count}"
+            dato.cliente_nombre = f"cliente{count}"
+            dato.cliente_direccion = f"ubiccacion{count}"
+            count+=1
+    if table_name == "empleados":
+        count = 0
+        for dato in datos:
+            dato.empleado_id = f"{table_name}{count}"
+            dato.empleado_identidad = f"empleado{count}"
+            dato.empleado_numero_telefonico = f"telefonico{count}"
+            dato.empleado_nombre = f"nombre{count}"
+            dato.empleado_direccion = f"direccion{count}"
+            count += 1
+    return datos
 
 
 def exit():

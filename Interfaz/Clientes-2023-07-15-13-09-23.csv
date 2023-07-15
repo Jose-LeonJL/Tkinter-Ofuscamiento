@@ -1,0 +1,21 @@
+cliente_id,cliente_numero_telefonico,cliente_cuenta_banaria,cliente_direccion,cliente_identidad,cliente_fecha_nacimiento,cliente_numero_tarjeta_credito,cliente_cuenta_bancaria,cliente_nombre
+clientes0,telefono0,cuenta_banaria0,ubiccacion0,identidad0,2023-07-01 13:39:34.213082,tarjeta0,688191659621685,cliente0
+clientes1,telefono1,cuenta_banaria1,ubiccacion1,identidad1,2023-07-01 13:39:34.214089,tarjeta1,251488518198727,cliente1
+clientes2,telefono2,cuenta_banaria2,ubiccacion2,identidad2,2023-07-01 13:39:34.215115,tarjeta2,250103054224905,cliente2
+clientes3,telefono3,cuenta_banaria3,ubiccacion3,identidad3,2023-07-01 13:39:34.216114,tarjeta3,522333252255997,cliente3
+clientes4,telefono4,cuenta_banaria4,ubiccacion4,identidad4,2023-07-01 13:39:34.217124,tarjeta4,84489695946481,cliente4
+clientes5,telefono5,cuenta_banaria5,ubiccacion5,identidad5,2023-07-01 13:39:34.218074,tarjeta5,511639025396183,cliente5
+clientes6,telefono6,cuenta_banaria6,ubiccacion6,identidad6,2023-07-01 13:39:34.218074,tarjeta6,884738454677664,cliente6
+clientes7,telefono7,cuenta_banaria7,ubiccacion7,identidad7,2023-07-01 13:39:34.219104,tarjeta7,852237196864092,cliente7
+clientes8,telefono8,cuenta_banaria8,ubiccacion8,identidad8,2023-07-01 13:39:34.220104,tarjeta8,370539931441851,cliente8
+clientes9,telefono9,cuenta_banaria9,ubiccacion9,identidad9,2023-07-01 13:39:34.221109,tarjeta9,492587543425654,cliente9
+clientes10,telefono10,cuenta_banaria10,ubiccacion10,identidad10,2023-07-02 16:24:28.277819,tarjeta10,704578136840424,cliente10
+clientes11,telefono11,cuenta_banaria11,ubiccacion11,identidad11,2023-07-02 16:24:28.278373,tarjeta11,261454787586432,cliente11
+clientes12,telefono12,cuenta_banaria12,ubiccacion12,identidad12,2023-07-02 16:24:28.279273,tarjeta12,886419629663982,cliente12
+clientes13,telefono13,cuenta_banaria13,ubiccacion13,identidad13,2023-07-02 16:24:28.280317,tarjeta13,946590130014017,cliente13
+clientes14,telefono14,cuenta_banaria14,ubiccacion14,identidad14,2023-07-02 16:24:28.281314,tarjeta14,970685761932096,cliente14
+clientes15,telefono15,cuenta_banaria15,ubiccacion15,identidad15,2023-07-02 16:24:28.281314,tarjeta15,363709723947818,cliente15
+clientes16,telefono16,cuenta_banaria16,ubiccacion16,identidad16,2023-07-02 16:24:28.282316,tarjeta16,254406497567747,cliente16
+clientes17,telefono17,cuenta_banaria17,ubiccacion17,identidad17,2023-07-02 16:24:28.283315,tarjeta17,335013257778713,cliente17
+clientes18,telefono18,cuenta_banaria18,ubiccacion18,identidad18,2023-07-02 16:24:28.284316,tarjeta18,359707485481492,cliente18
+clientes19,telefono19,cuenta_banaria19,ubiccacion19,identidad19,2023-07-02 16:24:28.285318,tarjeta19,105406710904301,cliente19
