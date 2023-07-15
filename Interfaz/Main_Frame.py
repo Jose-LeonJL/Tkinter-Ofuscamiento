@@ -1,14 +1,14 @@
-import datetime
-import tkinter.messagebox
-from tkinter import Tk, simpledialog,ttk
-import customtkinter
-from faker import Faker
-import Interfaz.Ui as App
-import Interfaz.Login_Frame as LoginView
-import Controller.Faker as FakerController
-from PIL import Image
 import os
 import csv
+import datetime
+import customtkinter
+from PIL import Image
+from faker import Faker
+import Interfaz.Ui as App
+import tkinter.messagebox
+import Interfaz.Login_Frame as LoginView
+from tkinter import Tk, simpledialog,ttk
+import Controller.Faker as FakerController
 
 import Models.clientes
 import database.database
@@ -46,7 +46,6 @@ def destroywidgets():
         i.destroy()
 
 
-
 def build_frame_main():
     frame_main = customtkinter.CTkFrame(master=App.app)
     frame_main.pack(side="top", expand=True, fill="both")
@@ -61,6 +60,7 @@ def build_frame_derecha(master):
     frame_izquierda.pack()
     addwidget(frame_izquierda)
     build_frame_derecha_body(frame_izquierda)
+
 
 def build_frame_centro(master):
     frame_centro = customtkinter.CTkFrame(master=master)
@@ -124,6 +124,7 @@ def build_frame_mid_body(master):
     addwidget(lbl_)
     addwidget(cbox_tablas)
 
+
 def build_frame_button_body(master):
     lblexportar = customtkinter.CTkLabel(master=master, text="Generar datos", fg_color="transparent",
                                          font=("Sans-Serif", 14), pady=5)
@@ -146,6 +147,7 @@ def build_frame_derecha_body(master):
                                               font=("Sans-Serif", 14))
     lbl_frame_center.pack(expand=True, fill="both")
     addwidget(lbl_frame_center)
+
 
 def build_table_frame(choice):
 
@@ -230,6 +232,7 @@ def build_table_frame(choice):
     addwidget(scrollbarx)
     addwidget(scrollbary)
 
+
 def exportfile():
     # Nombre del archivo CSV a crear
     fecha = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
@@ -269,6 +272,7 @@ def exportfile():
 
 
     ctk = tkinter.messagebox.showinfo(title="Datos exportados", message=f"Se exporto {combobox_var.get()}")
+
 
 def exit():
     destroywidgets()
