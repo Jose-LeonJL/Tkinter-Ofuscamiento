@@ -106,6 +106,7 @@ def boton_event_login():
                          "La contraseña debe contener al menos una letra minúscula, una letra mayúscula, un digito y un caracter especial!.")
     else:
         messagebox.showerror("Error de inicio de sesión", "Usuario/Contraseña inválidos.")
+
 def validar_credenciales(usuario, contraseña):
             # Verificar si el usuario y la contraseña cumplen con los requisitos
             if len(usuario) < 5:
